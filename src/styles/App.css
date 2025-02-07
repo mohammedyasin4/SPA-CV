@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Light gradient background */
+  color: #333;
+  transition:  0.3s ease, color 0.3s ease;
+}
+
+/* Container for header, nav, and footer */
+.container {
+  max-width: 1200px; /* Adjust this value as needed */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add some padding on the sides */
+}
+
+header {
+  padding: 20px;
+  background: linear-gradient(135deg, #4a90e2, #00bcd4); /* Vibrant gradient for header */
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin: 20px 20px 0 20px; /* Add some margin for spacing */
+  box-shadow: 0px 0px 5px 5px  #4a90e2;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #4a90e2, #00bcd4); /* Vibrant gradient for nav */
+  margin: 0;
+  border-radius: 10px;
+  margin: 10px 20px 0 20px; /* Optional: Add rounded corners */
+  box-shadow: 0px 0px 5px 5px  #4a90e2;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition:  0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #4a90e2, #00bcd4); /* Vibrant gradient for footer */
+  color: white;
+  box-shadow: 0px 0px 5px 5px  #4a90e2;
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin: 10px 20px 0 20px/* Add some margin for spacing */
+  
+}
+/* src/App.css */
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 15px;
+  }
+}
