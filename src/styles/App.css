@@ -4,42 +4,61 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Light gradient background */
+}
+
+/* Theme-specific body styles */
+body.light {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   color: #333;
-  transition:  0.3s ease, color 0.3s ease;
 }
 
-/* Container for header, nav, and footer */
+body.dark {
+  background: linear-gradient(135deg, #2d3436, #1a1a1a);
+  color: #f8f9fa;
+}
+
+/* Container */
 .container {
-  max-width: 1200px; /* Adjust this value as needed */
-  margin: 0 auto; /* Center the container */
-  padding: 0 20px; /* Add some padding on the sides */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* src/styles/App.css */
+/* Header Styles */
 header {
   padding: 20px;
-  color: white; /* Default text color */
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin: 20px 20px 0 20px;
+  transition: all 0.3s ease;
 }
 
-/* Apply gradient only if not using .light or .dark classes */
-header:not(.light):not(.dark) {
+header.light {
+  background: linear-gradient(135deg, #4a90e2, #00bcd4);
+  color: white;
+}
+
+header.dark {
+  background: linear-gradient(135deg, #2d3436, #1a1a1a);
+  color: white;
+}
+
+/* Navigation Styles */
+nav {
+  margin: 10px 20px 0 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+nav.light {
   background: linear-gradient(135deg, #4a90e2, #00bcd4);
   box-shadow: 0px 0px 5px 5px #4a90e2;
 }
 
-.light {
-  background-color: white;
-  color: black;
-}
-
-.dark {
-  background-color: black;
-  color: white;
+nav.dark {
+  background: linear-gradient(135deg, #2d3436, #1a1a1a);
+  box-shadow: 0px 0px 5px 5px #2d3436;
 }
 
 nav ul {
@@ -47,11 +66,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  background: linear-gradient(135deg, #4a90e2, #00bcd4); /* Vibrant gradient for nav */
   margin: 0;
-  border-radius: 10px;
-  margin: 10px 20px 0 20px; /* Optional: Add rounded corners */
-  box-shadow: 0px 0px 5px 5px  #4a90e2;
 }
 
 nav ul li {
@@ -59,10 +74,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
   padding: 10px 15px;
-  transition:  0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
+  color: white; /* Default for light theme nav */
+}
+
+nav.dark ul li a {
+  color: #f8f9fa;
 }
 
 nav ul li a:hover {
@@ -70,6 +89,7 @@ nav ul li a:hover {
   border-radius: 50%;
 }
 
+/* Section Styles */
 section {
   padding: 20px;
   display: flex;
@@ -79,18 +99,28 @@ section {
   flex: 1;
 }
 
+/* Footer Styles */
 footer {
   text-align: center;
   padding: 20px;
-  background: linear-gradient(135deg, #4a90e2, #00bcd4); /* Vibrant gradient for footer */
-  color: white;
-  box-shadow: 0px 0px 5px 5px  #4a90e2;
-  border-radius: 10px; /* Optional: Add rounded corners */
-  margin: 10px 20px 0 20px/* Add some margin for spacing */
-   
+  border-radius: 10px;
+  margin: 10px 20px 0 20px;
+  transition: all 0.3s ease;
 }
 
+footer.light {
+  background: linear-gradient(135deg, #4a90e2, #00bcd4);
+  box-shadow: 0px 0px 5px 5px #4a90e2;
+  color: white;
+}
 
+footer.dark {
+  background: linear-gradient(135deg, #2d3436, #1a1a1a);
+  box-shadow: 0px 0px 5px 5px #2d3436;
+  color: white;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;

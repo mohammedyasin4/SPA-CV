@@ -3,12 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../features/themeSlice';
 
 function Header() {
-
-  const theme = useSelector((state) => state.theme); 
+  const theme = useSelector((state) => state.theme.theme); // Fixed selector
   const dispatch = useDispatch();
 
   return (
-    <header className={theme}> 
+    <header className={theme}>
       <h1>Mohammed Yasin</h1>
       <button onClick={() => dispatch(toggleTheme())}>
         Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
