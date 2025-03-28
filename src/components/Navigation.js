@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux'; // Add Redux hook
+import { useSelector } from 'react-redux'; 
 
 function Navigation() {
-  // Get current theme from Redux store
+  // Hämtar aktuellt tema från Redux store
   const theme = useSelector((state) => state.theme.theme);
 
   return (
-    <nav className={theme}> {/* Add theme class */}
+    <nav className={theme}> 
       <ul>
         <li><Link to="/" className="nav-link">About me</Link></li>
         <li><Link to="/projects" className="nav-link">Projects</Link></li>

@@ -1,10 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from './features/counter/counterSlice'; // Example reducer
+import counterReducer from './features/counter/counterSlice'; 
 
-// Create the Redux store
+// Skapa Redux store
+
 const store = configureStore({
   reducer: {
-    counter: counterReducer, // Add your reducers here
+    counter: counterReducer, 
   },
 });
 

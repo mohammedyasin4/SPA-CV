@@ -1,10 +1,10 @@
 // src/store.js
 import { configureStore } from '@reduxjs/toolkit';
-import themeReducer from './features/themeSlice'; // Import the theme slice
+import themeReducer from './features/themeSlice'; // Importerar themeslice
 
 const store = configureStore({
   reducer: {
-    theme: themeReducer, // Add the theme reducer to the store
+    theme: themeReducer, 
   },
 });
 

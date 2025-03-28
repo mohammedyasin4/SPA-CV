@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -6,7 +6,6 @@ body {
   line-height: 1.6;
 }
 
-/* Theme-specific body styles */
 body.light {
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   color: #333;
@@ -17,14 +16,14 @@ body.dark {
   color: #f8f9fa;
 }
 
-/* Container */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Header Styles */
+/* Header */
 header {
   padding: 20px;
   text-align: center;
@@ -44,10 +43,10 @@ header.dark {
   color: white;
 }
 
-/* Navigation Styles */
+
 nav {
   margin: 10px 20px 0 20px;
-  border-radius: 10px;
+  border-radius: 6px;
   transition: all 0.3s ease;
 }
 
@@ -77,7 +76,7 @@ nav ul li a {
   text-decoration: none;
   padding: 10px 15px;
   transition: all 0.3s ease;
-  color: white; /* Default for light theme nav */
+  color: white; 
 }
 
 nav.dark ul li a {
@@ -89,7 +88,6 @@ nav ul li a:hover {
   border-radius: 50%;
 }
 
-/* Section Styles */
 section {
   padding: 20px;
   display: flex;
@@ -99,7 +97,6 @@ section {
   flex: 1;
 }
 
-/* Footer Styles */
 footer {
   text-align: center;
   padding: 20px;
@@ -120,7 +117,7 @@ footer.dark {
   color: white;
 }
 
-/* Responsive Design */
+/* Responsiv design */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -134,4 +131,40 @@ footer.dark {
   section {
     padding: 15px;
   }
+  header button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
 }
+
+
+header button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 13px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+}
+
+header.light button {
+  background: linear-gradient(135deg, #4a90e2, #00bcd4);
+  color: white;
+}
+
+
+header.dark button {
+  background: linear-gradient(135deg, #2d3436, #1a1a1a);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../features/themeSlice';
 
 function Header() {
-  const theme = useSelector((state) => state.theme.theme); // Fixed selector
+  const theme = useSelector((state) => state.theme.theme);
   const dispatch = useDispatch();
 
   return (
